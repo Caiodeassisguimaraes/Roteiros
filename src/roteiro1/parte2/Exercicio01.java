@@ -3,7 +3,7 @@ package roteiro1.parte2;
 import java.util.Locale;
 import java.util.Scanner;
 
-public class CalculoDeSalario {
+public class Exercicio01 {
 
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
