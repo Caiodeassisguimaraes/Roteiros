@@ -144,22 +144,34 @@ O Java é uma linguagem de programação fortemente tipada. Isso significa que e
 
 No Java temos os tipos primitivos:
 
+
 **int:** Armazena valores inteiros de 32 bits.
+
 **float:** Armazena números de ponto flutuante de 32 bits.
+
 **double:** Armazena números de ponto flutuante de 64 bits.
+
 **char:** Armazena um caractere Unicode de 16 bits.
+
 **boolean:** Armazena valores verdadeiro ou falso.
+
 **long:** Armazena valores inteiros de 64 bits.
+
 **short:** Armazena valores inteiros de 16 bits.
+
 **byte:** Armazena valores inteiros de 8 bits.
+
 
 E os tipos de Referência (Objetos):
 
+
 **String:** Armazena sequências de caracteres.
+
 **Array:** Armazena coleções de elementos do mesmo tipo.
+
 **Classe personalizada:** Tipos definidos pelo programador, como classes que você cria.
 
-1 – Crie o pacote roteiro2.parte1 com a classe Programa01 conforme o código abaixo. Observe que existem algumas variáveis declaradas com os tipos mais utilizados. Veja que uma das variáveis está sendo exibido em tela. Faça testes com as outras variáveis.
+1 – Crie o pacote **roteiro2.parte1** com a classe **Programa01** conforme o código abaixo. Observe que existem algumas variáveis declaradas com os tipos mais utilizados. Veja que uma das variáveis está sendo exibido em tela. Faça testes com as outras variáveis.
 
 ```Java
 public class Programa01 {
