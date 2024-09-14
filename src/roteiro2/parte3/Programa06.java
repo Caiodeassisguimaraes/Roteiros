@@ -8,11 +8,12 @@ public class Programa06 {
 		Scanner sc = new Scanner(System.in);
 
 		int grade;
-		
+
 		do {
-			System.out.print("Informe uma nota: ");
+			System.out.print("Informe uma nota ou digite -1 para parar: ");
 			grade = sc.nextInt();
 			if (grade == -1) {
+				System.out.print("Programa encerrado.");
 				break;
 			} else if (grade >= 7) {
 				System.out.println("Aprovado");
@@ -20,7 +21,6 @@ public class Programa06 {
 				System.out.println("Reprovado");
 			}
 		} while (grade != -1);
-		System.out.print("Programa encerrado.");
 
 		sc.close();
 	}

@@ -20,6 +20,11 @@ public class JogoDeAdvinhacao {
 		int palpite = sc.nextInt();
 
 		while (palpite != randomNumber) {
+
+			if (palpite == -1) {
+				System.out.println("Jogo encerrado");
+				break;
+			}
 			if (palpite > randomNumber) {
 				System.out.println("O seu palpite é maior do que o número. Tente novamente:");
 				palpite = sc.nextInt();
@@ -30,7 +35,9 @@ public class JogoDeAdvinhacao {
 
 		}
 
-		System.out.println("Parabéns! Você acertou!");
+		if (palpite == randomNumber) {
+			System.out.println("Parabéns, você acertou!");
+		}
 
 		sc.close();
 	}

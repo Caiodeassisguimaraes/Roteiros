@@ -6,27 +6,34 @@ public class Programa07 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
-		System.out.print("Digite o numero de notas: ");
-		int number = sc.nextInt();
 
-		double soma = 0;
+		double grade;
+		double sum = 0.0;
+		double count = 0.0;
+		double average;
 
-		for (int cont = 0; cont < number; cont++) {
-			System.out.print("Informe uma nota: ");
-			double grade = sc.nextInt();
+		do {
+			System.out.print("Informe uma nota ou digite -1 para parar: ");
+			grade = sc.nextInt();
+			if (grade == -1) {
+				if (count > 1) {
+					average = sum / count;
+					System.out.print("Media: " + average);
 
-			if (grade >= 7) {
+				} else {
+					System.out.print("Programa encerrado.");
+				}
+				break;
+			} else if (grade >= 7) {
 				System.out.println("Aprovado");
 			} else {
 				System.out.println("Reprovado");
 			}
-			soma += grade;
-		}
+			sum += grade;
+			count += 1;
+		} while (grade != -1);
+
 		sc.close();
-
-		double media = soma / number;
-
-		System.out.println("Media: " + media);
 
 	}
 
