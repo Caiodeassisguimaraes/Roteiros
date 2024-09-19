@@ -26,17 +26,17 @@ public class Programa07 {
 		 * quantas notas ficaram acima da média ? Sim ? Não ? Como ? Por quê ?
 		 * 
 		 * Não seria possível utilizar a mesma solução do Programa07 pois um vetor é
-		 * uma coleçao de dados indexada, unidimensional, homogênea e de tamano fixo.
+		 * uma coleção de dados indexada, unidimensional, homogênea e de tamanho fixo.
 		 * Indexada pois os elementos são acessados por meio de índice,
 		 * unidimensional porque diferentemente das matrizes o vetor possui apenas
 		 * uma dimensão, e homogênea visto que todos os dados devem ser do mesmo
 		 * tipo.
 		 * O tamanho fixo significa que o vetor deve ser alocado previamente
-		 * antes de ser utilizado, uma vez alocado, sua quantidade de elementos e
+		 * antes de ser utilizado, uma vez alocado, sua quantidade de elementos é
 		 * fixa. 
 		 * No Programa07 foi utilizado como premissa os mesmos requisitos do
 		 * Programa06, ou seja, não havia uma quantidade pré-fefinida de notas que
-		 * o usuário deveria informar e ao invés disso deveria ser implementada uma
+		 * o usuário deveria informar, ao invés disso deveria ser implementada uma
 		 * flag. Por isso não é possível utilizar um vetor no Programa07, mas abaixo
 		 * segue uma solução alternativa:
 		 */

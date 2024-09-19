@@ -10,10 +10,10 @@ public class Programa09 {
 		int[] vetorNotas = new int[5];
 
 		for (int cont = 0; cont < 5; cont++) {
-			System.out.println("Informe uma nota: ");
+			System.out.print("Informe uma nota: ");
 			int nota = sc.nextInt();
-			while (nota < 0 || nota > 10) {
-				System.out.println("Nota inválida, digite uma nota de 1 a 10: ");
+			while (nota <= 0 || nota > 10) {
+				System.out.print("Nota inválida, digite uma nota de 1 a 10: ");
 				nota = sc.nextInt();
 			}
 			vetorNotas[cont] = nota;
