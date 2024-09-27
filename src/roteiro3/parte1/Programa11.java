@@ -14,7 +14,7 @@ public class Programa11 {
 		grat = Programa11.calcGrat(sb);
 		// grat = calcGrat(sb);
 		imp = Programa11.calcImp(sb);
-		//imp = calcImp(sb);
+		// imp = calcImp(sb);
 		sr = sb + grat - imp;
 		System.out.println("Salário a receber: " + sr);
 		sc.close();
@@ -22,7 +22,6 @@ public class Programa11 {
 	}
 
 	public static double calcImp(double sb) {
-
 		return sb * 7 / 100;
 	}
 

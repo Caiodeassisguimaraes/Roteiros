@@ -8,8 +8,9 @@ public class Programa09 {
 		Scanner sc = new Scanner(System.in);
 
 		int[] vetorNotas = new int[5];
-
-		for (int cont = 0; cont < 5; cont++) {
+		
+		
+		/*for (int cont = 0; cont < 5; cont++) {
 			System.out.print("Informe uma nota: ");
 			int nota = sc.nextInt();
 			while (nota <= 0 || nota > 10) {
@@ -17,7 +18,7 @@ public class Programa09 {
 				nota = sc.nextInt();
 			}
 			vetorNotas[cont] = nota;
-		}
+		}*/
 
 		for (int cont = 0; cont < 5; cont++) {
 			System.out.println(vetorNotas[cont]);
