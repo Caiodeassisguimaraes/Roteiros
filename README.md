@@ -828,12 +828,12 @@ Deseja-se um controle simples de informações cadastrais de uma loja de roupas 
 1. Crie o pacote ```roteiro5.parte1``` com a classes ```Principal``` e ```Loja```. Conforme o cenário descrito, teremos que criar os seguintes atributos para a classe Loja:
 
 ```Java
-String nomeFantasia
-String razaoSocial
-String cnpj
-double valorFat
-double area
-String nomeProprietario
+String nomeFantasia;
+String razaoSocial;
+String cnpj;
+double valorFat;
+double area;
+String nomeProprietario;
 ```
 
 Crie os atributos indicados na classe ```Loja``` com o acesso ```private```.
