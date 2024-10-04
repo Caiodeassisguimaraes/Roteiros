@@ -839,7 +839,7 @@ String nomeProprietario;
 Crie os atributos indicados na classe ```Loja``` com o acesso ```private```.
 
 2. Implemente os métodos **Getterss** e **Setters** da classe ```Loja```.
-3. Agora iremos implementar o método construtor de forma que ele receba como parâmetro o nome Fantasia, a Razão Social e o CNPJ.
+3. Agora iremos implementar o método construtor de forma que ele receba como parâmetro o Nome Fantasia, a Razão Social e o CNPJ.
 
 **Observe** que no código abaixo utilizamos a palavra reservada ```this``` para acessar os atributos. Sempre que estamos implementando qualquer código dentro de uma classe específica (neste caso ```Loja```) e queremos acessar um atributo ou método, podemos usar ```this``` conforme o exemplo abaixo (com exceção os atributos ou métodos estáticos - ```static```).
 
