@@ -12,27 +12,40 @@ public class Principal {
 		loja02.setValorFat(20000);
 		loja03.setValorFat(10000);
 
-		/*System.out.println(" ****** Comparação com método estático ********");
-		Loja.compararFat_static(loja01, loja02);
+		/*
+		 * System.out.println(" ****** Comparação com método estático ********");
+		 * Loja.compararFat_static(loja01, loja02);
+		 * 
+		 * System.out.println(" ****** Comparação com método NÃO estático ********");
+		 * loja01.compararFat_naoStatic(loja02);
+		 * 
+		 * System.out.println(" ****** Comparação com método NÃO estático ********");
+		 * loja02.compararFat_naoStatic(loja01);
+		 */
+
+		System.out.println(" ****** Comparação com método estático ********");
+		System.out.println("Loja de Maior Fat: " + Loja.compararFat_static(loja01, loja02).getNomeFantasia());
+
+		/*
+		 * Loja lojaMaior = (Loja.compararFat_static(loja01, loja02));
+		 * System.out.println("Loja de Maior Fat: " + lojaMaior.getNomeFantasia());
+		 */
 
 		System.out.println(" ****** Comparação com método NÃO estático ********");
-		loja01.compararFat_naoStatic(loja02);
+		System.out.println("Loja de Maior Fat: " + loja01.compararFat_naoStatic(loja02).getNomeFantasia());
+
+		/*
+		 * Loja lojaM1 = loja01.compararFat_naoStatic(loja02);
+		 * System.out.println("Loja de Maior Fat: " + lojaM1.getNomeFantasia());
+		 */
 
 		System.out.println(" ****** Comparação com método NÃO estático ********");
-		loja02.compararFat_naoStatic(loja01);*/
+		System.out.println("Loja de Maior Fat: " + loja02.compararFat_naoStatic(loja01).getNomeFantasia());
 
+		/*
+		 * Loja lojaM2 = loja02.compararFat_naoStatic(loja01);
+		 * System.out.println("Loja de Maior Fat: " + lojaM2.getNomeFantasia());
+		 */
 
-		 System.out.println(" ****** Comparação com método estático ********"); Loja
-		 lojaMaior = (Loja.compararFat_static(loja01, loja02));
-		 System.out.println("Loja de Maior Fat: " + lojaMaior.getNomeFantasia());
-		  
-		 System.out.println(" ****** Comparação com método NÃO estático ********");
-		 Loja lojaM1 = loja01.compararFat_naoStatic(loja02);
-		 System.out.println("Loja de Maior Fat: " + lojaM1.getNomeFantasia());
-		  
-		 System.out.println(" ****** Comparação com método NÃO estático ********");
-		 Loja lojaM2 = loja02.compararFat_naoStatic(loja01);
-		 System.out.println("Loja de Maior Fat: " + lojaM2.getNomeFantasia());
-		 
 	}
 }
