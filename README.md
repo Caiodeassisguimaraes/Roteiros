@@ -1158,3 +1158,119 @@ public class Principal {
 Conseguiu absorver como se utiliza os dois tipos de métodos (Estáticos e Não Estáticos)? O que conseguiu entender sobre a utilização dos dois métodos (Estáticos e Não Estáticos)?
 
 5. Como exercício, faça com que os dois métodos (Estáticos e Não Estáticos) retornem o objeto “loja” de maior faturamento. Desta forma, a exibição dos dados da maior loja deve ser feita na classe Principal e não na classe Loja.
+
+# Roteiro 6
+
+## Composição
+
+Composição de objetos é uma maneira de se combinar objetos simples ou tipos de dados em objetos mais complexos. Objetos compostos são frequentemente referidos como tendo um relacionamento **"tem um"**. Um exemplo de composição do mundo real pode ser visto em um objeto automóvel, onde existe a relação com outros objetos como roda, volante, banco e etc.
+
+### Cenário:
+
+Deseja-se fazer um controle para ligações telefônicas, onde seja possível ter os números de origem e de destino destas ligações, assim como a cidade de origem e de destino. É preciso também ter o registro do horário de início e de término na ligação. Precisamos que o horário de início e de término da ligação seja representado por hora, minuto e segundo.  
+
+**OBS.:** Inicialmente iremos tratar as informações com os horários da ligação como String. Depois criaremos a nossa própria classe de Tempo com as regras que desejamos. Em Java já existem bibliotecas que fazem manipulação de Data/Hora, mas nesta atividade criaremos a nossa própria classe à título de aprendizagem.
+
+## Parte 1 (roteiro6.parte1)
+
+1. Crie o pacote `roteiro6.parte1` com a classes `Principal` e `Ligacao`. Conforme o cenário descrito, teremos que criar os seguintes atributos para a classe `Ligacao`:
+
+```Java
+String numOrigem
+String numDestino
+String localOrigem
+String localDestino
+String horaInicio
+String horaFim
+```
+
+Crie os atributos indicados na classe `Ligacao` com o acesso `private`.
+
+2. Crie o método construtor na classe Ligacao conforme o trecho de código abaixo.
+Observe que no código abaixo não passamos como parâmetro o horário de finalização da ligação.
+
+```Java
+public Ligacao(String numOrigem, String numDestino, String localOrigem, String localDestino, String horaInicio){
+        this.numOrigem = numOrigem;
+        this.numDestino = numDestino;
+        this.localOrigem = localOrigem;
+        this.localDestino = localDestino;
+        this.horaInicio = horaInicio;
+        this.horaFim = "";
+}
+```
+
+3. Implemente os métodos Getters e Setters da classe `Ligacao`.
+4. Implemente na classe Principal um teste simples para a criação de um objeto ligação, conforme o trecho de código abaixo. Faça os devidos testes para exibir os dados da ligação.
+
+```Java
+public static void main(String[] args) {
+   Ligacao lig01 = new Ligacao("121212", "565656", "A", "B", "10:15:02");
+}
+```
+
+5. Com o que foi implementado até o momento, seria possível, por exemplo encerrar esta ligação do item 4 com o horário de “10:20:35”?
+6. Com o horário encerrado, ou seja, com os horários de início e término preenchidos, teríamos como calcular o tempo de duração desta ligação? Sim ou Não? Como?  OBS.: Não é necessário implementar uma solução para este caso. Apenas analise o contexto e a complexidade envolvida, descrevendo o que seria necessário fazer.
+
+## Parte 2 (roteiro6.parte2) – Composição;
+
+1. Crie o pacote `roteiro6.parte2` com a cópia das classes `Principal` e `Ligacao` implementadas na parte1.
+2. Crie agora a classe `Tempo` com os atributos abaixo:
+
+```Java
+    private int hora;
+    private int minuto;
+    private int segundo;
+```
+
+3. Crie o construtor na classe Tempo passando como parâmetro: `hora`, `minuto`, `segundo`.
+4. Crie os Gettes e Settes para a classe `Tempo`.
+5. Vamos agora aplicar a composição na classe `Ligacao`. O horário das Ligações que inicialmente foi definido como `String` agora será do tipo `Tempo`. Podemos dizer que a classe `Tempo` faz parte da composição da classe `Ligacao`.
+Faça os ajustes abaixo na classe Ligacao:
+
+```Java
+public class Ligacao {
+    
+    private String numOrigem;
+    private String numDestino;
+    private String localOrigem;
+    private String localDestino;
+    private Tempo horaInicio;
+    private Tempo horaFim;
+    
+    public Ligacao(String numOrigem, String numDestino, String localOrigem, String localDestino, Tempo horaInicio){
+        this.numOrigem = numOrigem;
+        this.numDestino = numDestino;
+        this.localOrigem = localOrigem;
+        this.localDestino = localDestino;
+        this.horaInicio = horaInicio;
+        this.horaFim = null;
+    }
+
+    {Getters e Setters}	
+
+}
+```
+
+6. Após concluir o item 5, provavelmente a classe `Principal` apresentará problema, pois não será mais possível passar o parâmetro horário do tipo `String`. Faça os ajustes necessários com os devidos testes.
+
+## Parte 3 (roteiro6.parte3) – Exercício;
+
+1. Crie o pacote `roteiro6.parte3` com a cópia das classes `Principal`, `Ligacao` e `Tempo` implementadas na parte2.
+2. Implemente um método na classe `Ligacao` para verificar se um dado número faz parte na ligação. Ou seja, o método deve verificar se um número qualquer informado como parâmetro é o número de origem ou de destino da ligação.
+3. Implemente um método para calcular o valor da ligação. Considere que o valor da ligação vale R$1,00 por minuto.
+
+**OBSERVAÇÕES:** 
+
+- Implemente uma solução flexíveis, considerando que o valor da ligação pode mudar. E caso o valor seja alterado, devemos ter o mínimo de impacto no código.  
+
+- Divida as responsabilidades e implemente métodos nas classes apropriadas. Ou seja, métodos que envolvem informações de tempo, devem ficar na classe `Tempo`, métodos que envolvem informações de Ligação, devem ficar na classe `Ligacao`. Seguindo o mesmo princípio, as implementações relacionadas a interação com o usuário devem ficar na classe `Principal`. 
+
+4. Implemente um novo método para calcular o valor da ligação. Deveremos ter duas formas de cálculo da Ligacao (itens 3 e 4). De forma semelhante ao item 3, considere que o valor da ligação vale R$1,00 por minuto. Mas neste novo método, considere que será cobrado o valor do minuto, mesmo o tempo total da ligação tenha qualquer segundo excedente. Exemplos:
+
+- Início: 10:00:00; Término : 10:00:01; Duração : 00:00:00 ; Tempo cobrado : 1 minuto
+- Início: 10:00:00; Término : 10:05:01; Duração : 00:05:01 ; Tempo cobrado : 6 minutos
+- Início: 10:00:00; Término : 10:05:35; Duração : 00:05:35 ; Tempo cobrado : 6 minutos
+- Início: 09:55:50; Término : 10:03:53; Duração : 00:08:03 ; Tempo cobrado : 9 minutos
+
+5. Faça os testes necessários na classe `Principal` e compare os resultados.
