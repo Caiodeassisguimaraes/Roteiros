@@ -35,12 +35,17 @@ public class Tempo {
 		this.segundo = segundo;
 	}
 	
-	
-	//Metodo em construcao
-	public int duracao (int duracao){
+	//Metodo em construcao apenas para minutos
+	/*public int duracao (int duracao){
 	
 		return 0;
 		
 	}
+	// Segundo metodo considerando minutos e segundos
+	public int duracao (int duracao){
+		
+		return 0;
+		
+	}*/
 
 }
