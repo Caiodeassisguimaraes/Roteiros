@@ -78,9 +78,16 @@ public class Ligacao {
 
 	}
 
-	public double valorDaLigacao(double valor) {
-		// esta solucao nao resolve o problema porque so calcula a diferenca entre os minutos
-		double minutos = getHoraFim().getMinuto() - getHoraInicio().getMinuto();
-		return valor * minutos;
+	public double valorDaLigacao(double valorDoMinuto) {
+
+		return valorDoMinuto * Tempo.duracaoDaLigacao(horaInicio, horaFim);
+
 	}
+	
+	public double valorTotalDaLigacao(double valorDoMinuto) {
+
+		return valorDoMinuto * Tempo.duracaoTotalDaLigacao(horaInicio, horaFim);
+
+	}
+
 }

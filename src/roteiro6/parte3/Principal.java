@@ -1,5 +1,7 @@
 package roteiro6.parte3;
 
+import java.util.Scanner;
+
 public class Principal {
 
 	public static void main(String[] args) {
@@ -12,7 +14,11 @@ public class Principal {
 		lig01.setHoraFim(horaFim);
 		double valorDoMinuto = 1.0;
 
-		System.out.println(lig01.valorDaLigacao(valorDoMinuto));
+		System.out.printf("Valor da Ligação sem considerar os segundos: R$ %.2f%n", lig01.valorDaLigacao(valorDoMinuto));
+
+		System.out.println();
+
+		System.out.printf("Valor da Ligação considerando os segundos: R$ %.2f%n", lig01.valorTotalDaLigacao(valorDoMinuto));
 
 	}
 
