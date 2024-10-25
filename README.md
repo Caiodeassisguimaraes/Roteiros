@@ -1738,4 +1738,4 @@ Faça testes “setando” diferentes tipos de veículos para ver o resultado.
 
 **OBS.:** geração dos diagramas no StarUML: https://staruml.io/ . Para fazer a engenharia reversa do código siga as orientações conforme o vídeo a seguir: 
 
-[![Star UML - Gerando Diagrama de Classes a partir do código Java](https://www.youtube.com/watch?v=z6DDuZQArro)
+[Star UML - Gerando Diagrama de Classes a partir do código Java](https://www.youtube.com/watch?v=z6DDuZQArro)
