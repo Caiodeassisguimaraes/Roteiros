@@ -45,29 +45,22 @@ public class Tempo {
 	// Conversao de minuto para hora = minuto / 60
 	// Conversao de segundo para hora = segundo / 3600
 
-	public static int duracaoDaLigacao(Tempo inicioDaLigacao, Tempo fimDaLigacao) {
+	public static double duracaoDaLigacao(Tempo inicioDaLigacao, Tempo fimDaLigacao) {
 
-		int inicioDaLigacaoEmMinutos = inicioDaLigacao.hora * 60 + inicioDaLigacao.minuto;
-		int fimDaLigacaoEmMinutos = fimDaLigacao.hora * 60 + fimDaLigacao.minuto;
+		double inicioDaLigacaoEmSegundos = inicioDaLigacao.hora * 3600.0 + inicioDaLigacao.minuto * 60.0
+				+ inicioDaLigacao.segundo;
+		double fimDaLigacaoEmSegundos = fimDaLigacao.hora * 3600.0 + fimDaLigacao.minuto * 60.0 + fimDaLigacao.segundo;
+		double duracaoDaLigacaoEmSegundos = fimDaLigacaoEmSegundos - inicioDaLigacaoEmSegundos;
 
-		return fimDaLigacaoEmMinutos - inicioDaLigacaoEmMinutos;
+		return duracaoDaLigacaoEmSegundos / 60.0;
 
 	}
 
 	public static double duracaoTotalDaLigacao(Tempo inicioDaLigacao, Tempo fimDaLigacao) {
 
-		double inicioDaLigacaoEmSegundos;
-		double fimDaLigacaoEmSegundos;
-		double duracaoDaLigacaoEmSegundos;
-		double duracaoDaLigacaoEmMinutos;
+		double duracaoDaLigacaoEmMinutos = duracaoDaLigacao(inicioDaLigacao, fimDaLigacao);
 
-		inicioDaLigacaoEmSegundos = inicioDaLigacao.hora * 3600 + inicioDaLigacao.minuto * 60 + inicioDaLigacao.segundo;
-		fimDaLigacaoEmSegundos = fimDaLigacao.hora * 3600 + fimDaLigacao.minuto * 60 + fimDaLigacao.segundo;
-		duracaoDaLigacaoEmSegundos = fimDaLigacaoEmSegundos - inicioDaLigacaoEmSegundos;
-
-		duracaoDaLigacaoEmMinutos = duracaoDaLigacaoEmSegundos / 60;
-
-		if (duracaoDaLigacaoEmSegundos % 60 > 0) {
+		if (duracaoDaLigacaoEmMinutos > (int) duracaoDaLigacaoEmMinutos) {
 			duracaoDaLigacaoEmMinutos += 1;
 		}
 
