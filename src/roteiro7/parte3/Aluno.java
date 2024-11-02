@@ -8,20 +8,11 @@ public class Aluno {
 	private String nome;
 	private String curso;
 	private int anoIngresso;
-	private int qtdeDisciplinas;
 	private String situacao;
 	private ArrayList<String> listaDisciplinas;
 
 	public Aluno() {
 
-	}
-
-	public Aluno(int pMatricula, String pNome, String pCurso, int pAnoIngresso, int pQtdeDisciplinas) {
-		this.matricula = pMatricula;
-		this.nome = pNome;
-		this.curso = pCurso;
-		this.anoIngresso = pAnoIngresso;
-		this.setQtdeDisciplinas(pQtdeDisciplinas);
 	}
 
 	public Aluno(int matricula, String nome, String curso, int anoIngresso) {
@@ -64,19 +55,6 @@ public class Aluno {
 		this.anoIngresso = anoIngresso;
 	}
 
-	public int getQtdeDisciplinas() {
-		return qtdeDisciplinas;
-	}
-
-	public void setQtdeDisciplinas(int qtdeDisciplinas) {
-		this.qtdeDisciplinas = qtdeDisciplinas;
-		if (this.qtdeDisciplinas > 0) {
-			setSituacao("Matriculado");
-		} else {
-			setSituacao("Não Matriculado");
-		}
-	}
-
 	public String getSituacao() {
 		return situacao;
 	}
@@ -89,17 +67,23 @@ public class Aluno {
 		return listaDisciplinas;
 	}
 
-	public void setListaDisciplinas(ArrayList<String> listaDisciplinas) {
-		this.listaDisciplinas = listaDisciplinas;
-	}
-
 	public void addDisciplina(String disciplina) {
 		listaDisciplinas.add(disciplina);
 	}
 
+	public void addDisciplinas(ArrayList<String> disciplinas) {
+		listaDisciplinas.addAll(disciplinas);
+	}
+
+	public int getQuantidadeDisciplinas() {
+		return listaDisciplinas.size();
+	}
+
 	@Override
 	public String toString() {
-		return matricula + ", " + nome + ", " + curso + ", " + anoIngresso + ".";
+		return "Matricula : " + matricula + "\nNome : " + nome + "\nCurso : " + curso + "\nAno ingresso : "
+				+ anoIngresso + "\nSituacao : " + situacao + "\nQuantidade de disciplinas : "
+				+ getQuantidadeDisciplinas() + "\nDisciplinas: " + listaDisciplinas;
 	}
 
 }

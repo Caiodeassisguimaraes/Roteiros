@@ -81,11 +81,4 @@ public class Aluno {
 		this.situacao = situacao;
 	}
 
-	@Override
-	public String toString() {
-		return matricula + ", " + nome + ", " + curso + ", " + anoIngresso + ".";
-	}
-	
-	
-
 }
