@@ -2357,7 +2357,7 @@ public class JanelaBorderLayout_v1 extends JFrame{
 }
 ```
 
-Normalmente não é possível visualizar o componente JPanel e por isso colocamos deferentes cores para facilitar a identificação dos painéis
+Normalmente não é possível visualizar o componente JPanel e por isso colocamos diferentes cores para facilitar a identificação dos painéis
 
 Faça os testes executando a classe Principal.
 
